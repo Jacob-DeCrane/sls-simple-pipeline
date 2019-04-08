@@ -19,8 +19,8 @@ custom:
   value:
     dev: Hello
     qa: Bye
-  # deploymentSettings:
-  #   codeDeployRole: arn:aws:iam::788601987176:role/codedeploy-service-role
+  deploymentSettings:
+    codeDeployRole: arn:aws:iam::788601987176:role/lambda-sam-pipeline-stack-CodeDeployServiceRole-1UW4T6QD1972X
   #   stages:
   #     - dev
 
