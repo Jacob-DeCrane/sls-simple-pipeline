@@ -17,8 +17,8 @@ custom:
   - qa
   - prod
   value:
-    dev: "Hello"
-    qa: "Bye"
+    dev: Hello
+    qa: Bye
 
 package:
   exclude:
