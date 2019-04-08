@@ -16,7 +16,7 @@ phases:
       - serverless package --package artifacts/dev --stage dev -v
       # create qa deployment package
       - mkdir artifacts/qa
-      - serverless pacakge --package artifacts/qa --stage qa -v
+      - serverless package --package artifacts/qa --stage qa -v
 
 artifacts:
   files:
