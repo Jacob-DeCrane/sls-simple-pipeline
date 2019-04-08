@@ -1,0 +1,24 @@
+phases:
+  install:
+    commands:
+      # install dependencies
+      - npm install --silent --progress=false -g serverless
+      - npm install --silent --progress-false
+      - npm --version
+  build:
+    commands:
+      # create directory for deployment packages
+      - mkdir artifacts
+      # create dev deployment package
+      - mkdir artifacts/dev
+      - serverless package --package artifacts/dev --stage dev -v
+      # create qa deployment package
+      - mkdir artifacts/qa
+      - serverless pacakge --package artifacts/qa --stage qa -v
+
+artifacts:
+  files:
+    # export artifacts needed for dev and qa deployments to an S3 bucket
+    - artifacts/**/*
+    - serverless.yml
+    - deploy.sh

@@ -1,0 +1,15 @@
+{
+  "name": "sls-simple-pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-stage-manager": "^1.0.5",
+    "serverless-pseudo-parameters": "^2.4.0"
+  }
+}

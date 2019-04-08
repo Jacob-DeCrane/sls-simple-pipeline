@@ -1,0 +1,33 @@
+service: sls-simple-pipeline
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage}
+  region: us-east-1
+  role: arn:aws:iam::#{AWS::AccountId}:role/serverless-poc-lambda
+
+# you can define service wide environment variables here
+environment:
+  value: ${self:custom.value.${self:provider.stage}}
+
+custom:
+  stages:
+  - dev
+  - qa
+  - prod
+  value:
+    dev: "Hello"
+    qa: "Bye"
+
+package:
+  exclude:
+    - artifacts/**
+
+functions:
+  hello:
+    handler: handler.hello
+
+plugins:
+- serverless-stage-manager
+- serverless-pseudo-parameters
