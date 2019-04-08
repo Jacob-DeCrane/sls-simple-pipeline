@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "serverless-stage-manager": "^1.0.5",
-    "serverless-pseudo-parameters": "^2.4.0"
+    "serverless-pseudo-parameters": "^2.4.0",
+    "serverless-plugin-canary-deployments": "^0.4.7"
   }
 }
