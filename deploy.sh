@@ -8,4 +8,4 @@ npm install serverless-stage-manager serverless-pseudo-parameters serverless-plu
 
 echo "Deploying app to $env"
 echo "====================="
-serverless deploy --stage $env --package $CODEBUILD_SRC_DIR/artifacts/$env -v
+serverless deploy --stage $env --package $CODEBUILD_SRC_DIR/artifacts/$env -v --force
