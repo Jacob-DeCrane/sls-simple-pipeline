@@ -6,10 +6,9 @@ provider:
   stage: ${opt:stage}
   region: us-east-1
   role: arn:aws:iam::#{AWS::AccountId}:role/serverless-poc-lambda
-
-# you can define service wide environment variables here
-environment:
-    TWITTER_ACCESS_TOKEN: '1234abcd'
+  # you can define service wide environment variables here
+  environment:
+      TWITTER_ACCESS_TOKEN: '1234abcd'
 
 custom:
   stages:
