@@ -8,20 +8,17 @@ provider:
   role: arn:aws:iam::#{AWS::AccountId}:role/serverless-poc-lambda
   # you can define service wide environment variables here
   environment:
-      TWITTER_ACCESS_TOKEN: '1234abcd'
+      env: ${self:provider.stage}
 
 custom:
   stages:
   - dev
   - qa
   - prod
-  value:
-    dev: Hello
-    qa: Bye
   deploymentSettings:
     codeDeployRole: arn:aws:iam::788601987176:role/lambda-sam-pipeline-stack-CodeDeployServiceRole-1UW4T6QD1972X
-  #   stages:
-  #     - dev
+    stages:
+      - qa
 
 package:
   exclude:
