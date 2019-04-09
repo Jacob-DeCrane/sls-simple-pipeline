@@ -27,6 +27,8 @@ package:
 functions:
   hello:
     handler: handler.hello
+    memorySize: 256
+    timeout: 30
     deploymentSettings:
       type: Linear10PercentEvery1Minute
       alias: Live
