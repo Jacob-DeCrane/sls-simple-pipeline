@@ -17,8 +17,12 @@ phases:
       # create qa deployment package
       - mkdir artifacts/qa
       - serverless package --package artifacts/qa --stage qa -v
+      # create prod deployment package
+      - mkdir artifacts/prod
+      - serverless package --package artifacts/prod --stage prod -v
       # Copy the zip file from the original artifacts into the new environment package
       - cp artifacts/dev/*.zip artifacts/qa
+      - cp artifacts/dev/*.zip artifacts/prod
 
 artifacts:
   files:
